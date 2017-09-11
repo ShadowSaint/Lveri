@@ -44,4 +44,7 @@
         <auth-constraint>
         </auth-constraint>
     </security-constraint>
+    <login-config>
+        <auth-method>BASIC</auth-method>
+    </login-config>
 </web-app>

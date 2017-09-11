@@ -27,29 +27,29 @@ http://www.springframework.org/schema/task
               <property name="prefix" value="/WEB-INF/jsp/"/>
               <property name="suffix" value=".jsp"/>
        </bean>
-       <!--<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">-->
-              <!--<property name="url" value="jdbc:mysql://101.200.36.235:3306/gutongxue?serverTimezone=GMT"/>-->
-              <!--<property name="username" value="root"/>-->
-              <!--<property name="password" value="Grq1994711"/>-->
+       <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
+              <property name="url" value="jdbc:mysql://101.200.36.235:3306/gutongxue?serverTimezone=GMT"/>
+              <property name="username" value="root"/>
+              <property name="password" value="Grq1994711"/>
 
-              <!--<property name="maxActive" value="20"/>-->
-              <!--<property name="initialSize" value="1"/>-->
-              <!--<property name="maxWait" value="10000"/>-->
-              <!--<property name="minIdle" value="1"/>-->
-              <!--<property name="timeBetweenEvictionRunsMillis" value="3000"/>-->
-              <!--<property name="minEvictableIdleTimeMillis" value="300000"/>-->
+              <property name="maxActive" value="20"/>
+              <property name="initialSize" value="1"/>
+              <property name="maxWait" value="10000"/>
+              <property name="minIdle" value="1"/>
+              <property name="timeBetweenEvictionRunsMillis" value="3000"/>
+              <property name="minEvictableIdleTimeMillis" value="300000"/>
 
-              <!--<property name="validationQuery" value="SELECT 'x' FROM DUAL"/>-->
-              <!--<property name="testWhileIdle" value="true"/>-->
-              <!--<property name="testOnBorrow" value="false"/>-->
-              <!--<property name="testOnReturn" value="false"/>-->
+              <property name="validationQuery" value="SELECT 'x' FROM DUAL"/>
+              <property name="testWhileIdle" value="true"/>
+              <property name="testOnBorrow" value="false"/>
+              <property name="testOnReturn" value="false"/>
 
-              <!--&lt;!&ndash; 开启Druid的监控统计功能 &ndash;&gt;-->
-              <!--<property name="filters" value="stat"/>-->
-       <!--</bean>-->
-       <!--<bean id="GtxDao" class="com.gutongxue.www.dao.impl.GtxDaoImpl">-->
-              <!--<property name="dataSource" ref="dataSource"/>-->
-       <!--</bean>-->
+              <!-- 开启Druid的监控统计功能 -->
+              <property name="filters" value="stat"/>
+       </bean>
+       <bean id="GtxDao" class="com.lveri.www.dao.impl.LveriDaoImpl">
+              <property name="dataSource" ref="dataSource"/>
+       </bean>
        <!--<bean id="taskUtil" class="com.gutongxue.www.utilities.TaskUtil"/>-->
        <!--<context:component-scan base-package="com.gutongxue.www.utilities"></context:component-scan>-->
        <!--&lt;!&ndash; 配置 文件上传的支持 &ndash;&gt;-->
